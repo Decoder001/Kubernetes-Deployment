@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rcex1
+spec:
+  replicas: 5
+  selector:
+    app: helloapp
+  template:
+    metadata:
+      name: helloapp
+      labels:
+        app: helloapp
+    spec:
+      containers:
+      - name: helloapp
+        image: helloapp:v1
+        ports:
+        - containerPort: 8080
