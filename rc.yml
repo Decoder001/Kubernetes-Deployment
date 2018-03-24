@@ -13,7 +13,7 @@ spec:
         app: helloapp
     spec:
       containers:
-        name: helloapp
+      - name: helloapp
         image: helloapp:v1
         ports:
-        containerPort: 8080
+        - containerPort: 8080
